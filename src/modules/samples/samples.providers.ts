@@ -1,6 +1,6 @@
 import { Sample } from './sample.entity';
 
-import { SAMPLE_REPOSITORY } from '../../core/constants';
+import { SAMPLE_REPOSITORY } from '../../common/constants';
 
 export const samplesProviders = [
   {
