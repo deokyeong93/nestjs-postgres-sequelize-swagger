@@ -1,8 +1,8 @@
 import { Injectable, Inject } from '@nestjs/common';
 
-import { Sample } from './sample.entity';
-import { SampleDto } from './dto/sample.dto';
-import { SAMPLE_REPOSITORY } from '../../common/constants';
+import { Sample } from '@/modules/samples/sample.entity';
+import { SampleDto } from '@/modules/samples/dto/sample.dto';
+import { SAMPLE_REPOSITORY } from '@/common/constants';
 
 @Injectable()
 export class SamplesService {

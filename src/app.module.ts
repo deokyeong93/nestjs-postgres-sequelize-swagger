@@ -1,10 +1,10 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { DatabaseModule } from './common/database/database.module';
-import { LoggerMiddleware } from './common/middleware/logger/logger.middleware';
-import { SamplesModule } from './modules/samples/samples.module';
+import { AppController } from '@/app.controller';
+import { AppService } from '@/app.service';
+import { DatabaseModule } from '@/common/database/database.module';
+import { LoggerMiddleware } from '@/common/middleware/logger/logger.middleware';
+import { SamplesModule } from '@/modules/samples/samples.module';
 
 const ConfigModuleSetup = ConfigModule.forRoot({ isGlobal: true });
 

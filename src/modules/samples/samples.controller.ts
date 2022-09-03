@@ -5,9 +5,9 @@ import {
   ParseIntPipe,
   UseInterceptors,
 } from '@nestjs/common';
-import { SuccessInterceptor } from '../../common/interceptors/success.interceptor';
-import PositiveIntPipe from '../../common/pipes/positiveInt.pipe';
-import { SamplesService } from './samples.service';
+import { SuccessInterceptor } from '@/common/interceptors/success.interceptor';
+import PositiveIntPipe from '@/common/pipes/positiveInt.pipe';
+import { SamplesService } from '@/modules/samples/samples.service';
 
 @Controller('samples')
 @UseInterceptors(SuccessInterceptor)

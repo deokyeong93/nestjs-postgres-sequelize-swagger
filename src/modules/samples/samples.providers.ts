@@ -1,6 +1,6 @@
-import { Sample } from './sample.entity';
+import { Sample } from '@/modules/samples/sample.entity';
 
-import { SAMPLE_REPOSITORY } from '../../common/constants';
+import { SAMPLE_REPOSITORY } from '@/common/constants';
 
 export const samplesProviders = [
   {

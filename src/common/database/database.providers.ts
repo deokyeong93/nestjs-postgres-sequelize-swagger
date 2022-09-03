@@ -1,8 +1,8 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Sample } from '../../modules/samples/sample.entity';
+import { Sample } from '@/modules/samples/sample.entity';
 
-import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '../constants';
-import { databaseConfig } from './database.config';
+import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '@/common/constants';
+import { databaseConfig } from '@/common/database/database.config';
 
 export const databaseProviders = [
   {
@@ -24,7 +24,7 @@ export const databaseProviders = [
       }
       const sequelize = new Sequelize(config);
       sequelize.addModels([Sample]);
-      await sequelize.sync();
+      // await sequelize.sync();
       return sequelize;
     },
   },
