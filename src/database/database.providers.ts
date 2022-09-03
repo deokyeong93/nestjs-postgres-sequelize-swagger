@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 import { Sample } from '@/modules/samples/sample.entity';
 
 import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '@/common/constants';
-import { databaseConfig } from '@/common/database/database.config';
+import { databaseConfig } from '@/database/config/config';
 
 export const databaseProviders = [
   {
