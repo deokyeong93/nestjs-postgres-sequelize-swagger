@@ -19,6 +19,10 @@ async function bootstrap() {
   app.setGlobalPrefix(API_VERSION);
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({
+    origin: true, // 개발 할 때는 true, 배포할 때는 특정 URL 써야함
+    credentials: true, // Access-Control-Allow-Credentials CORS 헤더를 구성합니다. 헤더를 전달하도록 설정
+  });
 
   const swaggerConfig = new DocumentBuilder()
     .setTitle(APP_TITLE)
