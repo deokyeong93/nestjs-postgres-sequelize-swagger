@@ -1,10 +1,12 @@
-import { Sample } from '@/modules/samples/sample.entity';
+import { Sample } from '@/modules/samples/entity';
 
 import { SAMPLE_REPOSITORY } from '@/common/constants';
 
-export const samplesProviders = [
+const samplesProvider = [
   {
     provide: SAMPLE_REPOSITORY,
     useValue: Sample,
   },
 ];
+
+export default samplesProvider;

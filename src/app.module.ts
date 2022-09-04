@@ -4,7 +4,7 @@ import { AppController } from '@/app.controller';
 import { AppService } from '@/app.service';
 import { DatabaseModule } from '@/database/database.module';
 import { LoggerMiddleware } from '@/common/middleware/logger/logger.middleware';
-import { SamplesModule } from '@/modules/samples/samples.module';
+import { SamplesModule } from '@/modules/samples';
 
 const ConfigModuleSetup = ConfigModule.forRoot({ isGlobal: true });
 

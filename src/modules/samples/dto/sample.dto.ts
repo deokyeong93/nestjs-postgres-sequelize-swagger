@@ -1,4 +1,4 @@
-export class SampleDto {
+export default class SampleDto {
   readonly name: string;
   readonly email: string;
   readonly password: string;

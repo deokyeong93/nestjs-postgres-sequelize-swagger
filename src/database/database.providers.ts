@@ -1,28 +1,28 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Sample } from '@/modules/samples/sample.entity';
+import { Sample } from '@/modules/samples/entity';
 
 import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '@/common/constants';
-import { databaseConfig } from '@/database/config/config';
+import config from '@/database/config/config.js';
 
 export const databaseProviders = [
   {
     provide: SEQUELIZE,
     useFactory: async () => {
-      let config;
+      let postgresConfig;
       switch (process.env.NODE_ENV) {
         case DEVELOPMENT:
-          config = databaseConfig.development;
+          postgresConfig = config.development;
           break;
         case TEST:
-          config = databaseConfig.test;
+          postgresConfig = config.test;
           break;
         case PRODUCTION:
-          config = databaseConfig.production;
+          postgresConfig = config.production;
           break;
         default:
-          config = databaseConfig.development;
+          postgresConfig = config.development;
       }
-      const sequelize = new Sequelize(config);
+      const sequelize = new Sequelize(postgresConfig);
       sequelize.addModels([Sample]);
       // await sequelize.sync();
       return sequelize;

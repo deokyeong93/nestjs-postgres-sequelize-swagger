@@ -7,11 +7,11 @@ import {
 } from '@nestjs/common';
 import { SuccessInterceptor } from '@/common/interceptors/success.interceptor';
 import PositiveIntPipe from '@/common/pipes/positiveInt.pipe';
-import { SamplesService } from '@/modules/samples/samples.service';
+import { SamplesService } from '@/modules/samples/service';
 
 @Controller('samples')
 @UseInterceptors(SuccessInterceptor)
-export class SamplesController {
+export default class SamplesController {
   constructor(private readonly samplesService: SamplesService) {}
 
   @Get()
