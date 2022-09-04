@@ -1,10 +1,7 @@
-import * as dotenv from 'dotenv';
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('dotenv').config();
 
-import { IDatabaseConfig } from '@/database/interfaces/dbConfig.interface';
-
-dotenv.config();
-
-export const databaseConfig: IDatabaseConfig = {
+module.exports = {
   development: {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
