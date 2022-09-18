@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Sample } from '@/modules/samples/entity';
+import { Sample } from '@/database/models/sample.model';
 
 import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '@/common/constants';
 import * as config from '@/database/config/config.js';

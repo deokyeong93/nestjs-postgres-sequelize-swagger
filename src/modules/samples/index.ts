@@ -1,8 +1,8 @@
 import { DatabaseModule } from '@/database/database.module';
 import { Module } from '@nestjs/common';
-import { SamplesController } from './Samples.controller';
-import { samplesProviders } from './Samples.providers';
-import { SamplesService } from './Samples.service';
+import { SamplesController } from './samples.controller';
+import { samplesProviders } from './samples.providers';
+import { SamplesService } from './samples.service';
 
 @Module({
   imports: [DatabaseModule],

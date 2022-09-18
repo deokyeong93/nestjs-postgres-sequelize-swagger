@@ -9,5 +9,5 @@ export class SamplesService {
     private samplesRepository: typeof Sample,
   ) {}
 
-  async create(sample: SampleDto): Promise<Sample> {}
+  // async create(sample: SampleDto): {};
 }
